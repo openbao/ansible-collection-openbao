@@ -119,7 +119,7 @@ This example installs OpenBao from the repository, creates the service user, and
 License
 -------
 
-[AGPL-3.0-or-later](../../LICENSE)
+[MPL 2.0](../../LICENSE)
 
 Author Information
 ------------------

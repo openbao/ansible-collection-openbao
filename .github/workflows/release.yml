@@ -1,5 +1,5 @@
 ---
-name: Release adfinis.openbao
+name: Release openbao.openbao_ansible
 
 on: # yamllint disable-line rule:truthy
   release:
