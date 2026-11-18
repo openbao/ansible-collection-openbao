@@ -1,6 +1,6 @@
-# Adfinis Openbao Collection
+# Openbao Ansible Role Collection
 
-This repository contains the `adfinis.openbao` Ansible Collection. The collection contains roles to install and configure [OpenBao](https://www.openbao.org) clusters on servers and to back up OpenBao Raft storage.
+This repository contains an Ansible role Collection. The collection contains roles to install and configure [OpenBao](https://www.openbao.org) clusters on servers and to back up OpenBao Raft storage.
 
 Further configuration management that requires access to the OpenBao API and needs authentication is not supported. Please use OpenTofu or similar "state-aware" configuration management tools for this.
 
@@ -17,16 +17,16 @@ which requirements are needed.
 
 ### Roles
 
-| Role | Description |
-| ---- | ----------- |
-| [`adfinis.openbao.openbao_backup`](./roles/openbao_backup/) | Configures scheduled OpenBao Raft snapshots and optionally syncs them to S3-compatible storage |
-| [`adfinis.openbao.openbao_install`](./roles/openbao_install/) | Install OpenBao from repository or tarball |
-| [`adfinis.openbao.openbao_service_configuration`](./roles/openbao_service_configuration/) | Configures OpenBao as a service and prepares a cluster-ready configuration for one or more hosts |
+| Role                                                                                              | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ |
+| [`openbao.openbao_ansible.openbao_backup`](./roles/openbao_backup/)                               | Configures scheduled OpenBao Raft snapshots and optionally syncs them to S3-compatible storage   |
+| [`openbao.openbao_ansible.openbao_install`](./roles/openbao_install/)                             | Install OpenBao from repository or tarball                                                       |
+| [`openbao.openbao_ansible.openbao_service_configuration`](./roles/openbao_service_configuration/) | Configures OpenBao as a service and prepares a cluster-ready configuration for one or more hosts |
 
 ## Using this collection
 
 ```bash
-    ansible-galaxy collection install adfinis.openbao
+    ansible-galaxy collection install openbao.openbao_ansible
 ```
 
 You can also include it in a `requirements.yml` file and install it via
@@ -34,23 +34,23 @@ You can also include it in a `requirements.yml` file and install it via
 
 ```yaml
 collections:
-  - name: adfinis.openbao
+  - name: openbao.openbao_ansible
 ```
 
 To upgrade the collection to the latest available version, run the following
 command:
 
 ```bash
-ansible-galaxy collection install adfinis.openbao --upgrade
+ansible-galaxy collection install openbao.openbao_ansible --upgrade
 ```
 
 You can also install a specific version of the collection, for example, if you
 need to downgrade when something is broken in the latest version (please report
 an issue in this repository). Use the following syntax where `X.Y.Z` can be any
-[available version](https://galaxy.ansible.com/adfinis/openbao):
+[available version](https://galaxy.ansible.com/openbao/openbao_ansible):
 
 ```bash
-ansible-galaxy collection install adfinis.openbao:==X.Y.Z
+ansible-galaxy collection install openbao.openbao_ansible:==X.Y.Z
 ```
 
 See
@@ -221,15 +221,6 @@ The following instructions show how to setup a testlab installation on VMs or on
 >
 >     ansible-playbook -i inventory playbook.yaml
 
-## Release notes
-
-See the
-[changelog](https://github.com/ansible-collections/adfinis.openbao/tree/main/CHANGELOG.rst).
-
-## Roadmap
-
-<!-- Optional. Include the roadmap for this collection, and the proposed release/versioning strategy so users can anticipate the upgrade/update cycle. -->
-
 ## More information
 
 <!-- List out where the user can find additional information, such as working group meeting times, slack/matrix channels, or documentation for the product this collection automates. At a minimum, link to: -->
@@ -241,9 +232,3 @@ See the
 - [Ansible Community code of conduct](https://docs.ansible.com/ansible/devel/community/code_of_conduct.html)
 - [The Bullhorn (the Ansible Contributor newsletter)](https://docs.ansible.com/ansible/devel/community/communication.html#the-bullhorn)
 - [News for Maintainers](https://forum.ansible.com/tag/news-for-maintainers)
-
-## Licensing
-
-GNU Affero General Public License v3.0 or later.
-
-See [LICENSE](https://www.gnu.org/licenses/agpl-3.0.txt) to see the full text.

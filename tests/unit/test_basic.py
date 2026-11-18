@@ -1,4 +1,4 @@
-"""Unit tests for adfinis.openbao."""
+"""Unit tests for openbao.openbao_ansible."""
 
 
 def test_basic() -> None:

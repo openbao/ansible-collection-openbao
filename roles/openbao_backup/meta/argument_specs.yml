@@ -1,6 +1,6 @@
-# SPDX-License-Identifier: AGPL-3.0-or-later
+# SPDX-License-Identifier: MPL 2.0
 ---
-# argument spec file for adfinis.openbao.openbao_backup
+# argument spec file for openbao.openbao_ansible.openbao_backup
 
 argument_specs:
   main:

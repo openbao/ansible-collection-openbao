@@ -130,7 +130,7 @@ inventory or a playbook:
   hosts: openbao
   become: true
   roles:
-    - role: adfinis.openbao.openbao_backup
+    - role: openbao.openbao_ansible.openbao_backup
       vars:
         openbao_backup_agent_raft_snapshot_approle_role_id: "e516ae72-59db-d90d-9f51-fb976b32742e"
         openbao_backup_agent_raft_snapshot_approle_wrapped_secret_id_token: "s.CvJQ1hIk89cOYcwK2bmGJZNH"
@@ -270,7 +270,7 @@ wrapped_accessor:                c9dc7109-f61c-2213-e7da-80fb19325118
 
 ## License
 
-[AGPL-3.0-or-later](../../LICENSE)
+[MPL 2.0](../../LICENSE)
 
 ## Author Information
 
